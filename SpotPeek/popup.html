@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="css/mapbox.css" rel="stylesheet"/>
+</head>
+
+<style>
+body{
+	width: 400px;
+}
+#map{
+	height:150px;
+	width: 250px;
+	display:none;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+	background: grey;
+}
+.mapquest{
+	font-size: 80%;
+	margin-top: 2em;
+}
+</style>
+
+<body>
+	<h2>
+		SpotPeek
+	</h2>
+	<div>
+		<form>
+			<label>Enter Address</label>
+			<input name="address" type="text"/>
+			<input type="submit" />
+		</form>
+	</div>
+
+	<div id="map">
+	</div>
+
+	<div class="mapquest">
+		Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">
+	</div>
+	<script src="js/mapbox.js"></script>
+	<script src="js/jquery-2.0.3.js"></script>
+	<script src="js/popup.js"></script>
+</body>
+
+</html>

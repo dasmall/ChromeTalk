@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="underscore.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <style>
+    body {
+      min-width: 250px;
+      overflow-x: hidden;
+      min-height: 200px;
+      overflow-x:scroll;
+    }
+
+    img {
+      margin: 5px;
+      border: 2px solid black;
+      vertical-align: middle;
+      width: 75px;
+      height: 75px;
+    }
+    label{
+      display: block;
+    }
+  </style>
+  <body>
+    <h2>ColourSpec</h2>
+    <form name="color-spec">
+      <label for="domain">New Site</label>
+      <input name="domain" type="text"/>
+
+      <label for="colour">Colour Value</label>
+      <input name="colour" type="text"/>
+
+      <input type="submit"/>
+    </form>
+
+    <div class="settings">
+      <ul>
+      </ul>
+    </div>
+    <script type="text/template" class="spec-templ">
+      <% specs.forEach(function(spec, i){ %>
+        <li> <%- spec.domain %> - <%- spec.colour %> <a href="#" data-i="<%- i %>" class="delete">[delete spec]</a></li>
+      <% }) %>
+    </script>
+  </body>
+</html>
+
